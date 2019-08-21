@@ -21,11 +21,7 @@ var movieSchema = new Schema({
   }, mpaaRating: String,
   nowShowing: { type: Boolean, default: false },
   reviews: [reviewSchema],
-  cast: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Performer'
-  }]
-  // studio: {type: Schema.Types.ObjectId, ref: 'Studio'}
+  cast: [{type: Schema.Types.ObjectId, ref: 'Performer'}]
 }, {
   timestamps: true
 });
